@@ -1,3 +1,4 @@
+// Content component display time and heading
 const Content = () => {
     return(
         <div>
