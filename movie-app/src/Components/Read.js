@@ -1,7 +1,10 @@
+// Imports
 import Movies from "./Movies";
 
+// Raed component - Holds JSON data about movies
 const Read = () => {
 
+    // Array of Movies info - JSON format
     const data = [
         {
           "Title": "Avengers: Infinity War",
@@ -26,6 +29,8 @@ const Read = () => {
         }
       ];
 
+
+    // Pass data array to the Movies Component with the variable name myMovies 
     return (
       <div>
         <Movies myMovies={data} />
@@ -33,4 +38,5 @@ const Read = () => {
     )
 }
 
+// Export
 export default Read;
