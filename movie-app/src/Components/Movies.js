@@ -1,8 +1,9 @@
-import Read from "./Read";
-
-const Movies = () => {
+const Movies = (props) => {
     return(
-        <Read></Read>
+        <div>
+            <h3>Movie Component</h3>
+            {console.log(props.myMovies)};
+        </div>
     );
 }
 

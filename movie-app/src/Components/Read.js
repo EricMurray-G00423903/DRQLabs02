@@ -1,6 +1,8 @@
+import Movies from "./Movies";
+
 const Read = () => {
 
-    const movies = [
+    const data = [
         {
           "Title": "Avengers: Infinity War",
           "Year": "2018",
@@ -24,8 +26,11 @@ const Read = () => {
         }
       ];
 
-    return(
+    return (
+      <div>
         <h3>Read Component</h3>
+        <Movies myMovies={data} />
+      </div>
     )
 }
 
