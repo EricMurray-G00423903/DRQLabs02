@@ -28,7 +28,6 @@ const Read = () => {
 
     return (
       <div>
-        <h3>Read Component</h3>
         <Movies myMovies={data} />
       </div>
     )

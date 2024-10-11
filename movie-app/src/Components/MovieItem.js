@@ -8,15 +8,13 @@ function MovieItem(props) {
 
   return (
     <div>
-      <Card>
-        <Card.Header>{props.mymovie.Title}</Card.Header>
-        <Card.Body>
-          <blockquote className="blockquote mb-0">
-            <img src={props.mymovie.Poster} alt={props.mymovie.Title} />
-            <footer>{props.mymovie.Year}</footer>
-          </blockquote>
-        </Card.Body>
-      </Card>
+        <Card style={{ width: '18rem' }}>
+        <Card.Img variant="top" src={props.mymovie.Poster} alt={props.mymovie.Title} />
+            <Card.Body>
+                <Card.Title>{props.mymovie.Title}</Card.Title>
+                <Card.Text>{props.mymovie.Year}</Card.Text>
+            </Card.Body>
+        </Card>
     </div>
   );
 }
