@@ -37,6 +37,7 @@ function Create() {
             <div className="form-group">
             <label>Add Movie Title: </label>
                     <input type="text"
+                    name="title"
                     className="form-control"
                     value={title}
                     onChange={(e) => { setTitle(e.target.value) }}
@@ -44,6 +45,7 @@ function Create() {
 
                 <label>Add Movie Year: </label>
                     <input type="text"
+                    name="year"
                     className="form-control"
                     value={year}
                     onChange={(e) => { setYear(e.target.value) }}
@@ -51,6 +53,7 @@ function Create() {
 
                 <label>Add Movie Poster: </label>
                     <input type="text"
+                    name="poster"
                     className="form-control"
                     value={poster}
                     onChange={(e) => { setPoster(e.target.value) }}
