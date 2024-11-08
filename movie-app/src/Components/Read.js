@@ -13,7 +13,7 @@ const Read = () => {
       useEffect(
         () => {
           //axios get call to api page
-          axios.get('https://jsonblob.com/api/jsonblob/1287718524221775872')
+          axios.get('http://localhost:4000/api/movies')
           //.then to handle successful response
           .then((response) => {
             console.log(response.data); // log to console

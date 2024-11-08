@@ -1,5 +1,6 @@
 // Imports
 import { useState } from "react";
+import axios from "axios";
 
 // create function
 function Create() {
@@ -10,10 +11,22 @@ function Create() {
     const [poster, setPoster] = useState('');
 
     //when the submit button is clicked log the title and year and poster to the console
+    // create.js
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(title, year, poster);
-    }
+        
+        console.log(`Title: ${title}, Year: ${year}, Poster: ${poster}`);
+        
+        const movie = {
+        title: title,
+        year: year,
+        poster: poster
+        };
+        
+        axios.post('http://localhost:4000/api/movies', movie)
+        .then((res) => console.log(res.data))
+        .catch((err) => console.log(err.data));
+    };
 
 
     //on form submit go to handleSubmit() || use setTitle, year, poster funcs and values and pass event to the variables which will log to console
