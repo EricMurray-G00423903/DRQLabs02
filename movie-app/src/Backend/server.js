@@ -42,7 +42,13 @@ app.use((err, req, res, next) => {
 app.get('/api/movies', async (req, res) => {
     const movies = await Movie.find({});
     res.json(movies);
-  });
+});
+
+//GET Movie by id
+app.get('/api/movie/:id', async (req, res) => {
+    const movie = await Movie.findById(req.params.id);
+    res.send(movie);
+});
 
 //POST Handle Data from CreateJS
 app.post('/api/movies', async (req, res)=>{
@@ -52,12 +58,6 @@ app.post('/api/movies', async (req, res)=>{
 
     res.status(201).json({ message: 'Movie created successfully', movie: newMovie });
 })
-
-//GET Movie by id
-app.get('/api/movie/:id', async (req, res) => {
-    const movie = await Movie.findById(req.params.id);
-    res.send(movie);
-  });
 
 //Listener to log server to port
 app.listen(port, () => {
