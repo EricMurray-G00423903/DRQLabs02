@@ -9,7 +9,7 @@ app.use(cors());
 
 // Added mongoose
 const mongoose = require('mongoose');
-mongoose.connect('my_db_connection_string');
+mongoose.connect('mongodb+srv://admin:zQk9rdQ2w8!9@cluster0.zgru7.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0');
 
 // Import the Mongo Model
 const Movie = require('../Models/movie');
